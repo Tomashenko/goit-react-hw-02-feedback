@@ -1,11 +1,13 @@
+import { FeedbackBtn, FeedbackBtnList } from './Feedback.styled';
 
-
-const FeedbackOptions = ({onGoodIncrement, onNeutralIncrement, onBadIncrement}) => (
-    <div>
-      <button type="button" onClick={onGoodIncrement}>Good</button>
-      <button type="button" onClick={onNeutralIncrement} >Neutral</button>
-      <button type="button" onClick={onBadIncrement} >Bad</button>
-    </div>
-);
+const FeedbackOptions = ({ options, onLeaveFeedback }) => { 
+  return  <FeedbackBtnList>
+      {options.map(option => {
+          return <li key={option}>
+              <FeedbackBtn type="button" onClick={onLeaveFeedback} name={option}> {option}</FeedbackBtn>
+          </li>
+       }) }
+          </FeedbackBtnList>
+}
 
 export default FeedbackOptions;

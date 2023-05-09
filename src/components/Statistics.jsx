@@ -1,15 +1,17 @@
+import { StatisticsList } from './Feedback.styled';
 
 const Statistics = ({good, neutral, bad, total, positivePercentage}) => (
+
     <>
     <h2>Statistics</h2>
     <ul>
-    <li>Good:{good}</li>
-    <li>Neutral:{neutral}</li>
-    <li>Bad:{bad}</li>
-    <li>Total:{total}</li>
-    <li>Positive feedback:{positivePercentage}</li>
+    <StatisticsList>Good: {good}</StatisticsList>
+    <StatisticsList>Neutral: {neutral}</StatisticsList>
+    <StatisticsList>Bad: {bad}</StatisticsList>
+    <StatisticsList>Total: {total}</StatisticsList>
+    <StatisticsList>Positive feedback: {positivePercentage} %</StatisticsList>
     </ul></>
-    
+  
 )
 
 export default Statistics;
